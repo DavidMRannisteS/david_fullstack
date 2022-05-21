@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>HTML5 Notas</title>
+          <!--Siempre debemos colocar un título 
+            relevante a lo que vayamos mostrando-->
+</head>
+<body>
+    <h1><span style="color:purple">HTML</span></h1>
+      <!-- existen sólo h1,h2,h3,h4.h5.h6-->
+    <hr>
+    <h2><span style="color:blueviolet" >Que es HTML?</span></h2>
+    <img src="IMG/perro1.jpg" height="125"/>
+    <p>Hyper Text Markup Language.</p>
+    <p>Es el lenguage estandar para crear paginas web.</p>
+    <p>Describe la estructura.</p>
+    <p>Le indica al explorador que y como mostrarlo.</p>
+    <p>Consiste en etiquetas.</p>
+    <p>Las etiquetas indican parrafos, titulos, vinculos, etc.</p>
+    <p>Las etiquetas deben estar correctamente identadas.</p><br>
+      <!--tiene que tener una separación con respecto 
+        a la etiqueta anterior, usamos TAB-->
+    <hr><br>
+    <h2><span style="color:blueviolet" >Etiquetas</span></h2>
+    <p>Una etiqueta se conforma por 3 partes:</p>
+    <p>Cabecera: <...></p>
+    <p>Cuerpo: ......</p>
+    <p>Cierre: </...></p><br><hr><br>
+    <p>"<.h1,h2,h3,h4,h5,h6>" Titulos.</p>
+    <p>"<.p>  <./p>" Parrafos.</p>
+    <p>"<.hr>" Linea.</p>
+    <p>"<.br>" Salto de pagina (enter).</p>
+    <p>"<.!--comentario-->" Realizar comentarios sobre el codigo</p>
+    <p>"<.span>" Hace una seleccion silenciosa de texto dentro del parrafo<br>y que mediante el uso de CSS podremos anadir color.<br>"<.span style="color: red"> Ejemplo.</p>
+    <p>"<.a href="url"> texto <./a> Permite navegar a la url que deseemos<br>desde la misma pestana.</p>
+    <p>"<.a target="_blank" href="url"> texto <./a> Permite navegar a la url<br>que deseemos en una nueva pestana.</p>
+    <p>"<.img src="IMG/perro1.jpg" />" se utiliza para anadir imagenes - el<br>IMG/ es el nombre de la carpeta que contiene la imagen y el perro1.jpg<br>simboliza el nombre que tiene el archivo imagen.</p>
+    <p>"<.img src="IMG/perro1.jpg" widht="100" height="100"/>" cuando anadimos<br>la propiedad de <span style="color:blue" >widht="..."</span>podemos<br>modificar el ancho de la imagen y cuando anadimos la propiedad <span style="color:blue" >height="..."</span><br>podemos modificar la altura de la imagen.</p>
+    <hr>
+    <h4><span style="color:red">Formularios</span></h4>
+    <p>"<.form action="/formulario" method="POST">" El <.form> nos indica que<br>estamos por trabajar un formulario. Debe contener siempre un <span style="color:blue">action="..."</span>que<br>indica la accion que queremos en nuestro formulario y de un <span style="color:blue">method="..."</span><br>donde indicaremos el metodo que usaremos para almacenar la informacion<br>recibida del formulario"</p><br>
+    <p>"<.label for="...">" El <.label> hace referencia a cual es el dato que queremos<br>obtener del usuario. El <span style="color:blue">for="..."</span>hace un foco sobre el identificador que<br>solicitemos.</p><br>
+    <p>"<.input type="..." id="..." name="..." placeholder="..."/>" El <.input> nos<br>anade un campo de texto vacio que no nos indica nada, entonces se agrega<br><span style="color:blue">type="..."</span>, tambien se añade <span style="color:blue">id="..."</span>es el identificador y debe coincidir con<br>el foco que hace el for="..."</p>
+    <p><span style="color:blue">name="..."</span>esta propiedad no se nos puede olvidar nunca, es importante<br>porque cuando enviemos el formulario a algun servidor, el servidor va a<br>recibir una llave y un valor. La llave es el name= y el valor es "..." (lo que<br>escribamos entre las comillas).</p>
+    <p>El <span style="color:blue">placeholder="..."</span>sera un texto casi invisible dentro del cuadro que<br>indica un ejemplo a escribir y desaparece cuando el usuario escribe algo.</p><br>
+    <p>"<.textarea rows="..." cols="..." id="..." name="..." placeholder="..."/>"<br>El "<.textarea>" es tambien un cuadro de texto pero con la particularidad<br>de ser mas amplio y admitir por lo general algun comentario o explicación.</p>
+    <p>A diferemcia de los <.input/>, el <.textarea> tendrá el <span style="color:blue">rows="..."</span> que<br>indica la cantidad de filas y el <span style="color:blue">cols="..."</span> que indica la cantidad de columnas.</p>
+    <br>
+    <form action="/formulario" method="POST">
+      <label for="nombre" ></label>
+      <input type="text" id="nombre" name="nombre" 
+        placeholder="Nombre..."/><br>
+      <label for="apellido" ></label>
+      <input type="text" id="apellido" name="apellido" 
+        placeholder="Apellido..."/><br>
+      <label for="comentario"></label>
+      <textarea rows="10" cols="50" id="comentario" name="comentario" 
+      placeholder="Ingrese Comentario..."></textarea>
+      <br>
+      <input type="submit"/>
+    </form><hr>
+    <h4><span style="color:red">Botones</span></h4>
+    <p>"<."  .</p>
+    <p>"<."  .</p>
+    <p>"<."  .</p>
+    <p>"<."  .</p>
+    <p>"<."  .</p>
+    <p>"<."  .</p>
+    <hr>
+    <a href="https://google.com">Ir a Google</a>
+    <a target="_blank" href="https://google.com">Ir a Google</a><hr>
+    
+
+</body>
+</html>
