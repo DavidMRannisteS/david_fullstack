@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+    <!--______________________-->
+<html>
+    <!--______________________-->
+<head>
+    <title>MiWeb</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+    <!--______________________-->
+<body>
+    <h1>HTML</h1>
+    <h2>HTML</h2>
+    <h3>HTML</h3>
+    <h4>HTML</h4>
+    <h5>HTML</h5>
+    <h6>HTML</h6><hr>
+    <p>Parrafo 1</p>
+    <p>Parrafo 2</p>
+    <!--Comentario no va a aparecer
+         en el explorador-->
+    <p>Parrafo 3</p>
+    <p>Parrafo 4 es <span style="color:red">mucho mas largo</span> 
+        y vamos a usarlo de ejemplo para el /span</p>
+    <p>Parrafo 5 es mucho mucho mas largo para poder ver <br>
+        un ejemplo del /br que se encarga de separar en partes el texto</p>
+    <a href="https://google.com">Ir a Google</a> <br>
+    <!--_______________________-->
+    <a target="_blank" href="https://google.com">Ir a Google</a><hr>
+    <img src="IMG/perro1.jpg" width="30" /><hr>
+    <img src="IMG/perro1.jpg" height="30" /><hr>
+    <img src="IMG/perro1.jpg" height="10" width="25" /><hr>
+    <img src="IMG/perro1.jpg" height="25" width="10" /><hr>
+    <!--_______________________-->
+    <!--______Formularios______-->
+    <form action="/formulario" method="POST">
+        <label for="nombre" >Nombre</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Chanchito Feliz..."/>
+        <br>
+        <label for="apellido" >Apellido</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Chanchito Triste..."/>
+        <br>
+        <label for="comentario">Comentario</label>
+        <textarea rows="10" cols="50" id="comentario" placeholder="Ingrese Comentario" 
+        name="comentario"></textarea>
+        <br>
+        <input type="submit">
+    </form><hr>
+    <!--________Botones________-->
+    <form>
+        <textarea rows="10" cols="50" id="comentario" placeholder="Ingrese Comentario" 
+        name="comentario"></textarea>
+        <br>
+        <button type="button">Tipo Boton</button>
+            <!--debemos especificarle con JS cual es el comportamiento que nosotros
+            queremos que tenga el Tipo Boton-->
+            <!--La ventaja que tiene el type="button" es que nos permite añadir mas
+            etiquetas dentro de el. Ejempo: <IMG src="..."/> un boton imagem
+            Será entonces mucho mas personalizable-->
+        <button type="reset">Tipo reset</button>
+            <!--ve a dejar a nuestro formulario con los valores iniciales-->
+        <button type="submit">Tipo submit</button>
+            <!--va a enviar nuestro formulario a la ruta que hayamos seleccionado en 
+            .action="/..." y con el metodo que hayamos seleccionado en .method="..."-->
+    </form>
+
+    <!--<ul> es lista no ordenada. Cada vez que agreguemos elementos a esta lista estos
+    van a aparecer con un puntito en negro-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+    </ul>
+    <!--<ol> es lista ordenada. Cada vez que agreguemos elementos a esta lista estos
+    van a aparecer con un numero que los ordena-->
+    <ol>
+        <li value="50">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-roman;">Sub Elemento 1</li>
+                <li style="list-style-type:lower-roman;">Sub Elemento 2</li>
+                <li style="list-style-type:lower-roman;">Sub Elemento 3</li>
+                <li style="list-style-type:lower-roman;">Sub Elemento 4</li>
+            </ol>
+        </li>
+    </ol>
+    <!--de esta manera nosotros podemos crear listas y anidar listas dentro de 
+    nuestras listas-->
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Precio</th>
+                <th>Producto</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hola Beats</td>
+                <td>Es Gratis</td>
+            </tr>
+            <tr>
+                <td>Chanchito Feliz</td>
+                <td>19,90</td>
+            </tr>
+            <tr>
+                <td>Chanchito Feliz Muy Feliz</td>
+                <td>29,90</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>TOTAL 49,80</td>
+        </tfoot>
+    </table>
+    <br><br><br><br><br>
+</body>
+
+</html>   
