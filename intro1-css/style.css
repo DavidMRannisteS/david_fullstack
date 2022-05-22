@@ -1,0 +1,250 @@
+#Título {
+    color: tomato
+    /*el color se puede asignar de 3 maneras:*/
+    /*hexadecimal #: 
+        #0 la mayor ausencia de color =Negro
+        #F la mayor presencia de color =Blanco
+        Se pueden anotar usando 3 o 6 caracteres.
+        #000 Negro = #000000
+        #100 Rojo = FF0000
+        #010 Verde = #00FF00
+        #001 Azul = #0000FF
+        #FF0 amarillo
+        Gris = a tener los mismos valores en Rojo, Verde y Azul
+        #eee Gris suave
+    */
+    /*RGB
+        funciona similar al hexadecimal pero con la diferencia que se deben indicar valores desde el 0 al 255
+        rgb(0, 0, 0) = Negro
+        rgb(255, 0, 0) = Rojo
+        rgb(0, 255, 0) = Verde
+        rgb(0, 0, 255) = Azul
+        rgb(255, 255, 255) = Blanco
+        etc.
+    */
+    /*HSL*/
+}
+p.especial {
+    color:green
+}
+p.texto {
+    color:blueviolet
+}
+
+div p {
+    color:aquamarine
+}
+div h2, div h3 {
+    color:brown
+}
+*{
+    font-size: 24px;
+    /*color:black*/
+}
+    /* el universal solo aplica para aquellas etiquetas que no tengan un style ya definido
+    cuando una etiqueta ya tenga sus colores definido el universal * no aplicará la propiedad.
+    */
+.color {
+    border: 25px red outset
+    /* 5px = Grosor del borde
+    color 
+    style*/
+    /*style
+        dotted
+        dashed
+        solid
+        double
+        groove = E´ tridimensional
+        ridge = E´ tridimensional
+        inset = E´ tridimensional
+        outset = E´ tridimensional
+        none
+        hidden
+    */
+}
+.borde {
+    border-style: solid;
+    /*permite asignar el color al borde sin necesidad de indicar el ancho ni el color del borde*/
+    border-color:red;
+    /*permite asignar el color*/
+    border-radius: 10px;
+    /*permite asignar un borde redondeado*/
+    border-width: 5px;
+    /*se indica el ancho del borde*/
+}
+/*px, cm, mm, in, pt, pc, 
+    Son unidades de medida que utilizamos para asignar dimensiones a nuestros elementos utilizando CSS.
+    1px equivale y hace referencia a un pequeño cuadro de luz con el cual se generan las imagenes.
+    En los teléfonos 1px = 4px ya que tienen alta densidad de pixeles. Entonces todo lo que hagamos
+    es subjetivo dependiendo del dispositivo en el cual se vea.
+    px es la unidad minima de medida que se puede utilizar dentro de la web para mostrar algo.
+    1cm deberia ser algo aproximado a 1cm
+    1mm deberia ser algo aproximado a 1mm
+    1in debería ser algo aproximado a 1 pulgada
+    1pt (un punto) debería ser un 0.75/1 de pulgada
+    1pc (un pica) equivale a 12pt (puntos)
+*/
+/*em, rem
+    Son Unidades Relativas de Medida y se toma como base un elemento (va a variar de acuerdo al elemento al cual 
+    se le aplique) . Le vamos calculando masomenos el tamaño que va a tener nuestro elemento.
+    1em es relativo al tamaño de fuente que tiene el elemento en particular.
+    1rem es relativo tambien pero al tamaño de la fuente del elemento raíz. 1rem = 16px por defecto a menos que
+    cambiemos el tamaño de la fuente de la raiz <html>
+*/
+#fondo {
+    background-color: RGB(255, 0, 0);
+    /*opacity: 0.3;*/
+    height: 200px;
+    /*background-image: url("perro1.jpg");*/
+   
+    /*background-repeat: repeat-y;
+    background-position: center top; */
+    background: #f00 url("perro1.jpg") repeat-y center bottom /100px 100px;
+        /*dentro de un mismo backgroud podemos indicar todas las
+         propiedades y asi obtener una forma mucho mas corta.*/
+    background-size: auto;
+        /*Al usar la propiedad de  backround: ;  y la de  backgroud-size: ;  al mismo tiempo,
+        debemos indicar el size justo después del  background: ; .*/ 
+} 
+/*Fondo o Background
+    /#Color
+        - background-color: ; le da el color.
+        - background-color: RGB(255, 0, 0);
+        - background-color: RGBA(255, 0, 0, 1); donde el ultimo elemento indica que tambien podemos pasarle una opacidad o
+        transparencia al color en específico.
+        - opacity: ; cumple la misma funcion que la A del RGBA siendo 1 un valor completamente sólido y 0 un valor 
+        completamente transparente. Indicando la transparencia y/o opacidad al elemento completo.
+    #
+    /#Imagen
+        - background-image: url("perro1.jpg"); añadimos la imagen pero por lo general es bastante mas grande que el
+        contenido 
+        - height: 400px; con esta propiedad podremos variar el alto para visualizar mejor la imagen.
+        - background-size: ; permite redimensionar la imagen y puede tomar distintos valores:
+            - :auto; va a detectar el tamaño que la imagen debería tener de manera automática. La imagen NO se adaptará.
+            - :cover; la imagen utilizará todo el ancho que tenga disponible, entregandonos una imagen proporcional. La
+            imagen se irá adaptando.
+            - :contain; contiene la imagen dentro de las dimensiones nosototros hayamos especificado para este elemento.
+            - :100px 100px; son dimensiones que podemos especificar dentro del backgroud-size: ; donde el 1er valor el ANCHO
+            y el 2do valor el ALTO.
+        - background-repeat: ; permite especificar la cantidad de repeticiones para la imagen.
+            - :no-repeat; permite que la imagen aparezca una unica vez
+            - :repeat-x; permite que la imagen se repita en eje horizontal (eje x)
+            - :repeat-y; permite que la imagen se repita en eje vertical (eje y) 
+        - background-position: ; permite cambiar la posicion a partir de la cual comienza a repetirse la imagen.
+            - :left top; la 1ra propiedad se asigna al eje x, y la 2da propiedad se asigna al eje y.
+            - para la 1ra  :right ;  :center ;  :left;
+            - para la 2da  : top;    : center;  :bottom;
+    #
+    - Al  background: ;  tambien podemos agregarle valores de medida en dimensiones (cm, mm, em, rem, etc.) y dependiendo
+    de los valores que nosotros le pasemos sera desde dónde comenzará nuestro fondo dentro de nuestro elemento.
+*/
+.margen {
+    background-color: chocolate;
+    margin: 15px 20px 25px 30px;
+    /* Genera espacios que van a estar solamente afuera del elemento.
+      - 15px es el margen de arriba ( margin-top: ; ) 
+      - 20px es el margen la derecha ( margin-right: ; )
+      - 25px es el margen de abajo ( margin-bottom: ; )
+      - 30px es el margen de izquierda ( margin-left: ; )
+      */
+    padding: 30px 25px 20px 15px;
+    /* Generar espacios que van a estar solamente dentro del elemento.
+      Aplican las mismas propiedades que  margin: ;  ,podemos escribir de la misma manera y tendremos:
+      - 30px es el margen de arriba ( margin-top: ; ) 
+      - 25px es el margen la derecha ( margin-right: ; )
+      - 20px es el margen de abajo ( margin-bottom: ; )
+      - 15px es el margen de izquierda ( margin-left: ; )
+    */
+    border: solid 5px black;
+    /* Genera sensacion de aire entre los elementos.
+      Busca que los elementos no esten tan pegados a los bordes y que tambien se separen de otros elementos.
+    */
+}
+/*Nosotros tambien le podemos indicar un valor único para que se asigne al margin que querramos*/
+.margen2 {
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 5px rgba(54, 24, 3, 0.856);
+    height: 50px;
+    width: 100px;
+    overflow: scroll;
+    /*  - Sirve para cambiar la visibilidad de algún texto y tiene por defecto la propierdad  visible;
+        - Esto propiedad la podemos cambiar por  hidden;  donde todo el contenido que no alcance a mostrarse
+        dentro del elemento se va a ocultar.
+        Tambien podemos cambiar por  sroll;  que agrega pequeñas barras laterales que permiten deslizarnos
+        dentro de nuestro elemento HTML y asi visualizar todo el contenido que se tiene.
+    */
+}
+/* BoxModel 
+    - Es la manera en que se posiciona cada elemento HTML dentro de nuestro documento donde toda etiqueta 
+    va a tener un  margin:;  un border:;  un padding:;  y el contenido.
+    Para calcular el ancho total que va a tener un E´ se debe:  widht + padding+ border + margin = BOXMODEL.
+*/
+.margen3 {
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 5px rgba(54, 24, 3, 0.856);
+    height: 50px;
+    width: 100px;
+    overflow: scroll;
+    outline: 1px solid red;
+    /*Es como un borde pero que se coloca por fuera del borde y está antes del  margin:; */
+}
+.text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /*sirve para agregar decoraciones al texto
+        Si no carga Verdana; entonces intentará con Geneva;. Si no lo logra con Geneva; entonces intentará con
+        Tahoma;. Y si no lo logra con Tahoma; entonces lo intentará con sans-serif; .
+    */
+    text-align: center;
+    /*sirve para que nosotros indiquemos al texto que se quede:
+        Centrado        center;
+        Justificado     justify;
+        a Izquierda     left;
+        a Derecha       Right;
+    */
+    text-decoration: underline;
+    /*sirve para agregar decoraciones al texto
+        Valor por defecto   none;
+        Subrallado          underline;
+        Tachado             line-thrue;
+        Linea por arriba    overline;
+    */
+    text-shadow: 3px 4px 5px purple;
+    /*sirve para agregar sombreados al texto
+        cuanto se va a mover hacia la derecha   3px;
+        cuanto se va a mover hacia abajo        4px;
+        cantidad de difuminado al texto         5px;
+        color para el sombreado                 color;  
+
+    */
+}
+.text2 {
+    font-family: 'Koulen', sans-serif;
+    text-align: center;
+    text-decoration: overline;
+    text-shadow: 2px 2px 50px purple;
+}
+    /*Trajimos una fuente custom directamente desde google font*/
+a:link {
+    color: blue
+}
+a:visited {
+    color:blueviolet
+}
+a:hover {
+    color:purple
+}
+a:active {
+    color:#f00
+}
+    /*los links pueden tener 4 estados:
+        - Cuando nunca ha sido visitado               a:link{ }
+        - Cuando ya ha sido visitado                  a:visited{ }
+        - Cuando pasamos el mouse por encima          a:hover{ }
+        - Cuando el link se encuentra activo          a:active{ }
+        Es muy importante tener los  a: { }  bien ordenados.
+        A estos selectores nosotros podremos agregar todas las propiedades que aprendimos.
+    */
