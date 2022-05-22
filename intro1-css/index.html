@@ -1,0 +1,93 @@
+    <!--¿Qué es CSS?
+        - Cascading Style Sheets.
+        - Describe la presentación de un documento HTML.
+        - Un doc HTML puede tener Multiples CSS.
+        Escribiendo 1 solo HTML podemos obtener multiples diseños por medio de CSS. 
+        Ej: bootswatch.com
+        ¿Cómo funciona css?
+        - Selectores: seleccionar elementos que se encuentran dentro de nuestro HTML.
+        - Seleccionar +1 elementos: podemos seleccionar 1 o más elementos.
+        - Propiedades: 
+            Podemos seleccionar 1 elemento,
+            Podemos seleccionar multiples elementos,
+            Existen distintas formas de como ir a seleccionar elementos,
+            Cada propiedad puede tener un valor distinto o un conjunto de valores.
+        - Estructura:  "selector"{ propiedades: "valor;" }
+    -->
+    <!--¿Cómo utilizar codigo CSS dentro de nuestros archivos HTML?
+        1. Importando un Archivo de CSS. "<link rel="stylesheet" href="style.css"/>"
+            Creamos entonces el archivo .css dentro de la carpeta.
+        2. Escribiendo CSS dentro de nuestro documento. <style> ... { color: red } </style>"
+            Se hace mediante el uso de selectores se haran referencias en el <head> hacia 
+            las etiquetas que querramos aplicarles algún style. 
+        3. Escribir código CSS dentro de las mismas etiquetas de HTML (peor de todas las formas).
+    -->
+    <!--SELECTORES * 
+        Sirven para identificar a cuales etiquetas vamos a aplicar el style
+        - <h1>  consiste en identificar especificamente a h1 para aplicarle el style. (aplica a todas las etiquetas)
+
+        - id="Título"
+        - # le voy a indicar a CSS que debe buscar un elemento que contiene la propiedad id;
+           #Título {    } decimos: a los elementos contenidos dentro de id="Título" se le aplicará el style.
+
+        - class="texto"
+        - . Le va a indicar a CSS que debe buscar un elemento que contiene la propiedad class;
+           .texto {    } decimos: a los elementos contenidos dentro de class"texto" se le aplicará el style.
+        -  p. texto {    } decimos: que a todas las p que se esten incluidas en la class="texto" se le aplicará el style.
+
+        - div p {    } decimos: en todas nuestras etiquetas de div que contengan hijos, nietos, bisnietos, etc. de la 
+           etiqueta p se le aplicará el siguiente estilo.
+           
+        - div h2, div h3  con la , podemos seleccionar más de un elemento y aplicarle el mismo estilo de CSS.
+         
+        - * selector universal para aplicar el CSS a todo nuestro documento HTML.
+
+
+        
+    -->
+    <!--Apuntes
+        - El orden en que escribamos nuestro CSS es MUY importante
+        - Dependiendo el orden que nosotros vayamos escribiendo nuestro css, este se va a anteponer a 
+           lo que nosotros ya hayamos definido antes. Es el orden en el que se va a ir aplicando el style
+        - Siempre lo que escribamos al final de nuestro CSS va a tener prioridad respecto a lo que 
+           hayamos escrito antes.
+        -  Truco par el universal * : 
+    -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="margen">
+            Propiedad de Margen
+        </div>
+        <div class="margen2">
+            Propiedad de Margen 2
+        </div>
+        <div class="margen3">
+            Propiedad de Margen 3
+        </div>
+        <p class="text">Esto es un Texto</p>
+        <p class="text2">Esto es un Texto Customizado</p>
+        <a target="_blank" href="https://fonts.google.com/">Fuentes</a><br>
+        <article id="fondo">
+            Soy la Propiedad del backgroud
+        </article>
+        <h1 id="Título">Título</h1>
+        <p class="texto">Texto párrafo chanchito feliz</p>
+        <p class="texto especial">Texto párrafo chanchito feliz</p>
+        <p class="especial">Texto párrafo chanchito feliz</p>
+        <div>
+            <p>Hola chanchito feliz</p>
+            <h2>Soy un subtítulo</h2>
+            <h3>Soy un sub subtítulo</h3>
+        </div>
+        <h4 class="color">Propiedad color</h4>
+        <h4 class="borde">Propiedad borde</h4><br>
+    </body>
+</html>
