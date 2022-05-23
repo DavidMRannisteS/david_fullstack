@@ -1,0 +1,132 @@
+ul {
+    background-color: cyan;
+        /*Nos muestra la lista con el color indicado*/
+    /* list-style-type: none; */
+        /*Hará invisible los puntos de la <ul></ul>*/
+    /* padding-left: 0; */
+        /*Redefinirá el valor del padding de los elementos */
+    /* list-style-position: inside; */
+        /*Alinea el texto con los puntos cuando hay un <br></br>*/
+    list-style-type: circle;
+        /*puedo cambiar entonces la forma de la <ul></ul>*/
+}
+/*En el caso que querramos listar muchos elementos y que estos a su vez tengan muchas propiedades, lo mejor sería
+usar TABLAS, las usaremos mucho cuando construyamos paneles de administración*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /*Se utiliza para eliminar la separacion entre elementos de la tabla.*/
+}
+th, td {
+    border: solid 3px purple;
+    /*Administramos los bordes de la tabla.*/
+    padding: 5px;
+}
+
+th {
+    background-color: rgb(124, 18, 124);
+    color:rgb(197, 157, 104);
+    text-align: left;
+    /*Se encarga de alinear el texto a Izquierda*/
+}
+tr:nth-child(even) {
+    /*Selector que permite seleccionar elementos pares o impares*/
+    /*odd: par   <>   even: impar;*/
+    background-color: #eee;
+}
+tr:hover {
+    /* Se utiliza para hacer que cuando pasamos el mouse por encima de algun elemento, este cambie de color*/
+    background-color: gray;
+    cursor: pointer;
+    /*Se utiliza para hacer que el cursor cambie de forma*/
+}
+span {
+    display: block;
+    /*Forzar que los elementos partan en una nueva linea.
+      Valoralor por defecto que viene en la mayoría de los etiquetas que vayamos a utilizar en HTML*/
+    
+    /* display: none; */
+    /*Hará que los elementos desasparezcan*/
+
+    /* visibility: hidden; */
+    /*Hará que los elementos desasparezcan*/
+    
+    /* width: 300px; */
+    /*Va a asignar siempre ese ancho*/
+
+    max-width: 300px;
+    /*Va a asignar como máximo ese ancho, pero tambien podría ser menos*/
+    background-color: red;
+}
+.inline {
+    display: inline;
+    /*Los elementos que agreguemos no van a comenzar en una nueva linea.
+      Valor por defecto para:  <span>  <a>  <IMG>*/
+}
+#position {
+    position: sticky;
+    left: 20px;
+    top: 25px;
+    /*
+        static;  valor por defecto con el que vienen todos los elementos HTML.
+        relative; indica la posicion relativa en la que debería estar posicionado el elmento
+        fixed;  indica que debe tener una posicion pero con respecto a lo que nosotros estamos viendo en el explorador.
+                se utilizaba para crear menús que quedaban pegados en algún lugar de la pantalla o barras de navegación.
+        absolute;  similar al  fixed;  solo que este se va a posicionar relativo con el elemento padre bas cercano que tenga.
+        sticky;  nos entrega una mezcla entre  relative;  y  fixed;  
+    */
+}
+/*flotar a nuestros elementos HTML dentro de nuestro documento*/
+.left {
+    float: left;
+    /*Ocurrirá que el elemento se pocisionará unicamente a la izquierda*/
+    width: 200px;
+    height: 200px;
+}
+.right {
+    float: right;
+    /*Ocurrirá que el elemento se posicionará unicamente a la derecha*/
+}
+/*Todo esto sirve si queremos una imagen y al costado más texto en relación a esa imagen*/
+.container {
+    height: 200px;
+}
+/* .card {
+    border: solid 0px #ddd;
+    border-radius: 5px;
+    margin: 0;
+    padding: 10px 0px;
+    width: 33.3%; }
+/*Esta es una forma antigua en que los frameworks de css utilizaban para asignar columnas*/ 
+.column {
+    margin: 0;
+    padding: 10px 0;
+    width: 33.3%;
+}
+.inline-block {
+    display: inline-block;
+    /*cuando le pasamos la propiedad  inline-block;  al display también podremos asignar 
+    un  height;  widht;  a estos elementos.
+    Servirá mucho para crear menús de navegación los cuales tengan los link de izquierda a
+    derecha o derecha a izquierda. Ya que con esta manera se puede asignar un ancho fijo
+    logrando que los links se vean uniformes.
+        SI solamente es tuviera  inline;  no se le podrá
+            asignar valores de  height;  ni  width;*/
+    height: 55px;
+    width: 220px;
+    background-color: blueviolet;
+}
+.center {
+    /*ESTA ES LA MAGIA PARA CENTRAR UN ELEMENTO
+        debemos indicar siempre un ancho menor al 100%.*/
+    padding: 50px 0;
+    /*0 para la horizontal
+      para centrar verticalmente no le daremos un alto y le añadiremos  padding;  */
+    text-align: center;
+    /*para centrar el texto que se encuentra dentro.*/
+    width: 200px;
+    margin: 0 auto;
+    /*el 0 es para que no aparezca centrado verticalmente.*/
+    background-color: aqua;
+}
+/*CON LO APREHENDIDO PODREMOS ASIGNARLE UN STYLE A PRACTICAMENTE TODO LO QUE QUERRAMOS.*/
