@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+        <!--<header> </header>
+            Header se utiliza para poder agrupar links, imagenes y algun logo de
+            nuestra pagina. Se pueden crear tantas etiquetas de <header> como nosotros
+            querramos siempre y cuando: 
+            - No podemos meter una etiqueta de <header> dentro de una etiqueta de <header>.
+            - No podemos meter una etiqueta de header dentro de una etiqueta de footer.-->
+        <!--<section> </section>
+            Section se utiliza para definir secciones dentro de nuestra aplicacion.
+            Dentro de esta se puede colocar las etiquetas que nosotros querramos.-->
+        <!--<footer> </footer>
+            Footer es el pie de pagina de nuestra web, puede contener:
+            - Copyright,
+            - Informacion de contacto,
+            - Informacion del sitio,
+            - Links para volver al inicio de nuestra pagina,
+            - Informacion del autor, etc.-->
+        <header id="título">
+            <h1>Blog de David</h1>
+        </header>
+        <!--<div> </div>
+            DIV cumple la misma funcion que la etiqueta <section>, se utiliza para poder
+            dividir nuestro contenido y agruparlo en secciones.
+            Era muy utilizado antes de que salieran las nuevas etiquetas de <section>
+            y <articule>
+            - Es muy común ver muchas etiquetas de <div> dentro de etiquetas de <div>
+            y esto no es necesariamente malo.
+            - Se va a generar una <section> dentro de una <sextion> dentro de otra <section>
+            dentro de otra <section> y bien al final de todas las secciones/div nosotros
+            vamos a colocar un <p></p>.
+            - Este es un error bastatnte comun que lo único que logra es añadir mayor
+            complejidad al codigo de HTML que nosotros estamos escribiendo.
+            Nos va a ir complicando la existencia a nosotros como programadores y 
+            estaremos añadiendo más código por añadir más código.
+            - Entonces si nosotros encontramos varios <div> anidados que no tienen una
+            class ni tampoco un id los podremos eliminar y dejar solamente 1(uno) -->
+        <!--< id="..."> < class="...">
+            Atributos ID y CLASS asignan un identificador único o genérico a nuestras
+            etiquetas de HTML. Esto servirá para poder interactuar con ellos por medio
+            de JS o para poder asignarle algun < style="...">.
+            - El atributo id sólo se puede utilizar 1 vez
+            - El atributo class si nos permitira asignarle el mismo identificador a
+            más de un elemento.
+            - Si se podría tener un id y una class iguales pero esto traería a 
+            confunsiones por lo que es mejor asignar valores distintos.
+            - Con el uso de estos atributos y por medio de un link podremos hacer que
+            nuestra página vay a una section sin necesidad que la página se refresque.
+            - Ej: < id="..."></>    <a href="#..."></a> -->
+        <section class="container">
+        <!--<article> </article>
+            Artcle se utiliza para poder definir contenido completamente independiente.
+            Ej: Post de un blog, Historia de noticias, Enmanrcar una publicacion-->
+            <article class="post">
+                <h2>Título de mi post</h2>
+                <p>Descripción de mi post</p>
+                <img src="IMG/libro.jpeg" width="400"/>
+                <p>Texto del artículo como texto de prueba para que quede bueno nuestro blog</p>
+            </article>
+            <article class="post">
+                <h2>Titulo de mi post 2</h2>
+                    <p>Descripción de mi post</p>
+                    <img src="IMG/tarea.jpg" width="400"/>
+                    <p>Texto del artículo 2 como texto de prueba para que quede bueno nuestro blog</p>
+            </article>
+            <article class="post">
+                <h2>Título de mi post 3</h2>
+                    <p>Descripción de mi post</p>
+                    <img src="IMG/perro1.jpg" width="400"/>
+                    <p>Texto del artículo 3 como texto de prueba para que quede bueno nuestro blog</p>
+            </article>
+        </section>
+        <footer>
+        <!--<a href= "mailto:"> </a>
+            "mailto:...@mail.com" hará que cuando demos click a ese link abrira el cliente
+            de correos para que automáticamente el usuario pueda mandar un correo.
+            Ej: <a href="mailto:davidranniste@gmail.com"></a> -->
+            <section>
+                <a href="#título">Ir Arriba</a>
+                <a href="mailto:davidranniste@gmail.com">Contáctame Aqui</a>
+                <a target="_blank" href="https://fonts.google.com/">Fuentes</a>
+            </section>
+            <p>Copyright 2022</p>
+        </footer>        
+    </body>
+</html>
